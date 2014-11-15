@@ -6,10 +6,27 @@
 
 package contract;
 
+import dto.*;
+import eto.*;
+
 /**
  *
  * @author Group F
  */
 public interface CustomerContract {
+    /**
+     * 
+     * @param scheduleID
+     * @return
+     * @throws NoScheduleException 
+     */
+    public TravelSummary getTravelerDetails(int TravelDTO) throws NoScheduleException;
     
+    public ReservationDTO makeReservation(TravelSummary travelSummary);
+    
+    public void getTrafficInformation();
+    
+    public void isUserResident();
+    
+    public AccountSummary makeAccount(AccountDetail accDetail);
 }

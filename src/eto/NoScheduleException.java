@@ -4,14 +4,12 @@
  * and open the template in the editor.
  */
 
-package dto;
-
-import java.io.Serializable;
+package eto;
 
 /**
  *
  * @author Paul
  */
-public class TravelDetailsDTO implements Serializable {
+public class NoScheduleException extends Exception {
     
 }
