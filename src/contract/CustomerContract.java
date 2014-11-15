@@ -8,25 +8,47 @@ package contract;
 
 import dto.*;
 import eto.*;
+import java.util.Collection;
 
 /**
  *
  * @author Group F
  */
 public interface CustomerContract {
+    
     /**
-     * 
+     * Gets a complete timetable of ferry traffic according to the departure and destination port and departure time
+     * @param traficDetail
+     * @return 
+     * @throws InvalidRouteException,NoFerriesFoundException
+     */
+    public Collection<TrafficSummary> getTrafficInformation(TrafficDetail traficDetail) throws InvalidRouteException,NoFerriesFoundException;
+    
+    /**
+     * Gets all the information required for making a reservation for the users review
      * @param scheduleID
-     * @return
+     * @return 
      * @throws NoScheduleException 
      */
     public TravelSummary getTravelerDetails(TravelDetail travelDetail) throws NoScheduleException;
     
-    public ReservationDTO makeReservation(TravelSummary travelSummary);
+    /**
+     * Makes a reservation after the user has approved all the details, including the price, of his travel
+     * @param resDetail
+     * @return 
+     * @throws NoSuchReservationException
+     */
+    public ReservationSummary makeReservation(ReservationDetail resDetail) throws NoSuchReservationException;
     
-    public void getTrafficInformation();
+    /**
+     * checks weather a user is a resident and entitled to special discounts
+     */
+    public void isUserResident(AccountDTO accDTO);
     
-    public void isUserResident();
-    
+    /**
+     * submits the necessary information to create a user account and returns a summary as confirmation
+     * @param accDetail
+     * @return 
+     */
     public AccountSummary makeAccount(AccountDetail accDetail);
 }

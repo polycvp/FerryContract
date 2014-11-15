@@ -16,9 +16,9 @@ public class TrafficSummary extends TrafficDTO implements Serializable {
     private String destinationPort;
     private Date departureTime;
     private Date arrivalTime;
-    private double price;
+    private PriceDTO price;
 
-    public TrafficSummary(long id, String ferry, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, double price) {
+    public TrafficSummary(long id, String ferry, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, PriceDTO price) {
         super(id);
         this.ferry = ferry;
         this.departurePort = departurePort;
@@ -75,11 +75,11 @@ public class TrafficSummary extends TrafficDTO implements Serializable {
         this.arrivalTime = arrivalTime;
     }
 
-    public double getPrice() {
+    public PriceDTO getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(PriceDTO price) {
         this.price = price;
     }
 
