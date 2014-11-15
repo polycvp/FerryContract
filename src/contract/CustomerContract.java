@@ -42,8 +42,9 @@ public interface CustomerContract {
     
     /**
      * checks weather a user is a resident and entitled to special discounts
+     * @return true or false depending on the user account
      */
-    public void isUserResident(AbstractAccount accDTO);
+    public boolean isUserResident(AbstractAccount accDTO);
     
     /**
      * submits the necessary information to create a user account and returns a summary as confirmation
