@@ -11,5 +11,16 @@ package eto;
  * @author Paul
  */
 public class NoSuchReservationException extends Exception {
-    
+     private long id;
+
+    public NoSuchReservationException(long id, String message)
+    {
+        super(message);
+        this.id = id;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
 }

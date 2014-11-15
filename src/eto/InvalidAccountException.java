@@ -10,10 +10,10 @@ package eto;
  *
  * @author Paul
  */
-public class NoScheduleException extends Exception {
-     private long id;
+public class InvalidAccountException extends Exception {
+    private long id;
 
-    public NoScheduleException(long id, String message)
+    public InvalidAccountException(long id, String message)
     {
         super(message);
         this.id = id;

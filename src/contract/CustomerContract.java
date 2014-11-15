@@ -51,5 +51,5 @@ public interface CustomerContract {
      * @param accDetail
      * @return 
      */
-    public AccountSummary makeAccount(AccountDetail accDetail);
+    public AccountSummary makeAccount(AccountDetail accDetail) throws InvalidAccountException;
 }

@@ -11,5 +11,16 @@ package eto;
  * @author Paul
  */
 public class InvalidRouteException extends Exception {
-    
+     private long id;
+
+    public InvalidRouteException(long id, String message)
+    {
+        super(message);
+        this.id = id;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
 }
