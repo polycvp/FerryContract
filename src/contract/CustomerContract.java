@@ -43,7 +43,7 @@ public interface CustomerContract {
     /**
      * checks weather a user is a resident and entitled to special discounts
      */
-    public void isUserResident(AccountDTO accDTO);
+    public void isUserResident(AbstractAccount accDTO);
     
     /**
      * submits the necessary information to create a user account and returns a summary as confirmation

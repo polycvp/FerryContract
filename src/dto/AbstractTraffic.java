@@ -6,17 +6,17 @@ import java.io.Serializable;
  *
  * @author Rick
  */
-public class TrafficDTO implements Serializable {
+public abstract class AbstractTraffic implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private long id;
 
-    public TrafficDTO(long id) {
+    public AbstractTraffic(long id) {
         this.id = id;
     }
 
-    public TrafficDTO() {
+    public AbstractTraffic() {
     }
 
     public long getId() {

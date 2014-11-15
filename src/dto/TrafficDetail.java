@@ -7,7 +7,7 @@ import java.util.Date;
  *
  * @author Rick
  */
-public class TrafficDetail extends TrafficDTO implements Serializable {
+public class TrafficDetail extends AbstractTraffic implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

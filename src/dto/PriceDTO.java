@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package dto;
 
 import java.io.Serializable;
@@ -12,11 +6,14 @@ import java.io.Serializable;
  *
  * @author Paul
  */
-public class PriceDTO implements Serializable{
+public class PriceDTO implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+
     private double personPrice;
     private double residentDiscount;
-    
-    public PriceDTO(double personPrice,double residentDiscount) {
+
+    public PriceDTO(double personPrice, double residentDiscount) {
         this.personPrice = personPrice;
         this.residentDiscount = residentDiscount;
     }
@@ -36,6 +33,5 @@ public class PriceDTO implements Serializable{
     public void setResidentDiscount(double residentDiscount) {
         this.residentDiscount = residentDiscount;
     }
-    
-    
+
 }
