@@ -15,14 +15,13 @@ public class AccountDetail extends AbstractAccount implements Serializable
     private String name;
     private String email;
     private String address;
-    private boolean isResident;
     
     public AccountDetail(long id)
     {
         super(id);
     }
     
-    public AccountDetail(long id, String cprNo, String password, String name, String email, String address, boolean isResident)
+    public AccountDetail(long id, String cprNo, String password, String name, String email, String address)
     {
         super(id);
         this.cprNo = cprNo;
@@ -30,7 +29,6 @@ public class AccountDetail extends AbstractAccount implements Serializable
         this.name = name;
         this.email = email;
         this.address = address;
-        this.isResident = isResident;
     }
 
     public String getCprNo() {
@@ -71,15 +69,6 @@ public class AccountDetail extends AbstractAccount implements Serializable
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public boolean isIsResident() {
-        return isResident;
-    }
-
-    public void setIsResident(boolean isResident) {
-        this.isResident = isResident;
-    }
-    
+    }    
     
 }
