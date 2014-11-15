@@ -20,7 +20,7 @@ public interface CustomerContract {
      * @return
      * @throws NoScheduleException 
      */
-    public TravelSummary getTravelerDetails(int TravelDTO) throws NoScheduleException;
+    public TravelSummary getTravelerDetails(TravelDetail travelDetail) throws NoScheduleException;
     
     public ReservationDTO makeReservation(TravelSummary travelSummary);
     
