@@ -8,7 +8,8 @@ public class ReservationDetail extends AbstractReservation implements Serializab
 {
     private static final long serialVersionUID = 1L;
     
-    private Collection<AccountDetail> passengers;
+    private AccountSummary reserver;
+    private Collection<PassengerDTO> passengers;
     private Collection<AbstractVehicle> vehicles;
     private String departurePort;
     private String destinationPort;
@@ -21,26 +22,47 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         super(reservationSerialNumber);
     }
 
-    public ReservationDetail(Collection<AccountDetail> passengers, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, Collection<AbstractVehicle> vehicles, String totalPrice, String reservationSerialNumber)
+    public ReservationDetail(AccountSummary reserver, Collection<PassengerDTO> passengers, Collection<AbstractVehicle> vehicles, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, String totalPrice, String reservationSerialNumber)
     {
         super(reservationSerialNumber);
+        this.reserver = reserver;
         this.passengers = passengers;
+        this.vehicles = vehicles;
         this.departurePort = departurePort;
         this.destinationPort = destinationPort;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
-        this.vehicles = vehicles;
         this.totalPrice = totalPrice;
     }
 
-    public Collection<AccountDetail> getPassengers()
+    public AccountSummary getReserver()
+    {
+        return reserver;
+    }
+
+    public void setReserver(AccountSummary reserver)
+    {
+        this.reserver = reserver;
+    }
+
+    public Collection<PassengerDTO> getPassengers()
     {
         return passengers;
     }
 
-    public void setPassengers(Collection<AccountDetail> passengers)
+    public void setPassengers(Collection<PassengerDTO> passengers)
     {
         this.passengers = passengers;
+    }
+
+    public Collection<AbstractVehicle> getVehicles()
+    {
+        return vehicles;
+    }
+
+    public void setVehicles(Collection<AbstractVehicle> vehicles)
+    {
+        this.vehicles = vehicles;
     }
 
     public String getDeparturePort()
@@ -83,14 +105,6 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         this.arrivalTime = arrivalTime;
     }
 
-    public Collection<AbstractVehicle> getVehicles() {
-        return vehicles;
-    }
-
-    public void setVehicles(Collection<AbstractVehicle> vehicles) {
-        this.vehicles = vehicles;
-    }
-
     public String getTotalPrice()
     {
         return totalPrice;
@@ -100,6 +114,5 @@ public class ReservationDetail extends AbstractReservation implements Serializab
     {
         this.totalPrice = totalPrice;
     }
-
    
 }
