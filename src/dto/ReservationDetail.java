@@ -15,14 +15,14 @@ public class ReservationDetail extends AbstractReservation implements Serializab
     private String destinationPort;
     private Date departureTime;
     private Date arrivalTime;
-    private String totalPrice;
+    private double totalPrice;
 
     public ReservationDetail(String reservationSerialNumber)
     {
         super(reservationSerialNumber);
     }
 
-    public ReservationDetail(AccountSummary reserver, Collection<PassengerDTO> passengers, Collection<AbstractVehicle> vehicles, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, String totalPrice, String reservationSerialNumber)
+    public ReservationDetail(AccountSummary reserver, Collection<PassengerDTO> passengers, Collection<AbstractVehicle> vehicles, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, double totalPrice, String reservationSerialNumber)
     {
         super(reservationSerialNumber);
         this.reserver = reserver;
@@ -105,12 +105,12 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         this.arrivalTime = arrivalTime;
     }
 
-    public String getTotalPrice()
+    public double getTotalPrice()
     {
         return totalPrice;
     }
 
-    public void setTotalPrice(String totalPrice)
+    public void setTotalPrice(double totalPrice)
     {
         this.totalPrice = totalPrice;
     }
