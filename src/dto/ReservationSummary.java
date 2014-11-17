@@ -2,46 +2,40 @@ package dto;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Paul
- */
 public class ReservationSummary extends AbstractReservation implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    private long TravelSummaryId;
-    private double totalPrice;
+    private TravelSummary travelSummary;
+    private String receipt;
 
     public ReservationSummary(String reservationSerialNumber)
     {
         super(reservationSerialNumber);
     }
 
-    public ReservationSummary(String reservationSerialNumber, long TravelSummaryId, double totalPrice)
+    public ReservationSummary(String reservationSerialNumber, TravelSummary travelSummary, String receipt)
     {
         super(reservationSerialNumber);
-        this.TravelSummaryId = TravelSummaryId;
-        this.totalPrice = totalPrice;
+        this.travelSummary = travelSummary;
+        this.receipt = receipt;
     }
 
-    public long getTravelSummaryId()
-    {
-        return TravelSummaryId;
+    public TravelSummary getTravelSummary() {
+        return travelSummary;
     }
 
-    public void setTravelSummaryId(long TravelSummaryId)
-    {
-        this.TravelSummaryId = TravelSummaryId;
+    public void setTravelSummary(TravelSummary travelSummary) {
+        this.travelSummary = travelSummary;
     }
 
-    public double getTotalPrice()
-    {
-        return totalPrice;
+    public String getReceipt() {
+        return receipt;
     }
 
-    public void setTotalPrice(double totalPrice)
-    {
-        this.totalPrice = totalPrice;
+    public void setReceipt(String receipt) {
+        this.receipt = receipt;
     }
+    
+    
 }

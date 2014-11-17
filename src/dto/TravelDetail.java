@@ -2,12 +2,8 @@ package dto;
 
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Date;
 
-/**
- *
- * @author Paul
- */
+
 public class TravelDetail extends AbstractTravel implements Serializable {
 
     private static final long serialVersionUID = 1L;
