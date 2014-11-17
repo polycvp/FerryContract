@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ * Contains all the prices for each ferry trip plus the resident discount
+ * Extension classes are: PriceVehicleDTO
  * @author Paul
  */
 public class PriceDTO implements Serializable {

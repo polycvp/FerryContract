@@ -9,7 +9,6 @@ import java.io.Serializable;
 public class PriceVehicleDTO extends PriceDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
     private double carPrice,lorryPrice,largeMachineryPrice,personPrice,resindentDiscount;
     
     public PriceVehicleDTO(double personPrice, double residentDiscount) {

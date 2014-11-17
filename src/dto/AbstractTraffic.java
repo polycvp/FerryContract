@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ *  Contains relevant information for representing a single entry in the ferry timetable
+ *  Extensions to this class are: TrafficSummary and TrafficDetail
  * @author Rick
  */
 public abstract class AbstractTraffic implements Serializable {

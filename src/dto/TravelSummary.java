@@ -11,12 +11,11 @@ public class TravelSummary extends AbstractTravel implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    private Collection<AccountDetail> passengers;
-    private CarDTO car;
-    private LorryDTO lorry;
-    private LargeMachineryDTO largeMachinery;
+    private Collection<AccountSummary> passengers;
+    private Collection<AbstractVehicle> vehicles;
     private long trafficSummaryId;
-    private PriceVehicleDTO price;
+    private PriceDTO price;
+    private double totalPrice;
 
 
     
@@ -25,88 +24,52 @@ public class TravelSummary extends AbstractTravel implements Serializable {
         super(id);
     }
 
-    public TravelSummary(long id, Collection<AccountDetail> passengers, CarDTO car, long trafficSummaryId)
+    public TravelSummary(long id, Collection<AccountSummary> passengers, Collection<AbstractVehicle> vehicles, long trafficSummaryId, double totalPrice)
     {
         super(id);
         this.passengers = passengers;
-        this.car = car;
+        this.vehicles = vehicles;
         this.trafficSummaryId = trafficSummaryId;
+        this.totalPrice = totalPrice;
     }
 
-    public TravelSummary(long id, Collection<AccountDetail> passengers, LorryDTO lorry, long trafficSummaryId)
-    {
-        super(id);
-        this.passengers = passengers;
-        this.lorry = lorry;
-        this.trafficSummaryId = trafficSummaryId;
-    }
-
-    public TravelSummary(long id, Collection<AccountDetail> passengers, LargeMachineryDTO largeMachinery, long trafficSummaryId)
-    {
-        super(id);
-        this.passengers = passengers;
-        this.largeMachinery = largeMachinery;
-        this.trafficSummaryId = trafficSummaryId;
-    }
-
-    public Collection<AccountDetail> getPassengers()
-    {
+    public Collection<AccountSummary> getPassengers() {
         return passengers;
     }
 
-    public void setPassengers(Collection<AccountDetail> passengers)
-    {
+    public void setPassengers(Collection<AccountSummary> passengers) {
         this.passengers = passengers;
     }
 
-    public CarDTO getCar()
-    {
-        return car;
+    public Collection<AbstractVehicle> getVehicles() {
+        return vehicles;
     }
 
-    public void setCar(CarDTO car)
-    {
-        this.car = car;
+    public void setVehicles(Collection<AbstractVehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 
-    public LorryDTO getLorry()
-    {
-        return lorry;
-    }
-
-    public void setLorry(LorryDTO lorry)
-    {
-        this.lorry = lorry;
-    }
-
-    public LargeMachineryDTO getLargeMachinery()
-    {
-        return largeMachinery;
-    }
-
-    public void setLargeMachinery(LargeMachineryDTO largeMachinery)
-    {
-        this.largeMachinery = largeMachinery;
-    }
-
-    public long getTrafficSummaryId()
-    {
+    public long getTrafficSummaryId() {
         return trafficSummaryId;
     }
 
-    public void setSelectedRoute(long trafficSummaryId)
-    {
+    public void setTrafficSummaryId(long trafficSummaryId) {
         this.trafficSummaryId = trafficSummaryId;
     }
-    
-    public PriceVehicleDTO getPrice()
-    {
+
+    public PriceDTO getPrice() {
         return price;
     }
 
-    public void setPrice(PriceVehicleDTO price)
-    {
+    public void setPrice(PriceDTO price) {
         this.price = price;
     }
 
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 }

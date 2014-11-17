@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ * Contains relevant information for making a reservation. 
+ * Extensions for this class are: ReservationDetail and ReservationSummary
  * @author Paul
  */
 public abstract class AbstractReservation implements Serializable 

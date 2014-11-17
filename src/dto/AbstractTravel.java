@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ * Contains relevant travel information for a users journey
+ * Extensions for this class are: TravelDetail and TravelSummary
  * @author Paul
  */
 public abstract class AbstractTravel implements Serializable {

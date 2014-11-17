@@ -12,87 +12,46 @@ public class TravelDetail extends AbstractTravel implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    private Collection<AccountDetail> passengers;
-    private String licencePlate;
-    private String departurePort;
-    private String destinationPort;
-    private Date departureTime;
-    private double totalPrice;
+    private Collection<AccountSummary> passengers;
+    private Collection<AbstractVehicle> vehicles;
+    private TrafficSummary trafficSummary;
 
     public TravelDetail(long id)
     {
         super(id);
     }
 
-    public TravelDetail(long id, Collection<AccountDetail> passengers, String licencePlate, String departurePort, String destinationPort, Date departureTime, double totalPrice)
+    public TravelDetail(long id, Collection<AccountSummary> passengers, Collection<AbstractVehicle> vehicles, TrafficSummary trafficSummary)
     {
         super(id);
         this.passengers = passengers;
-        this.licencePlate = licencePlate;
-        this.departurePort = departurePort;
-        this.destinationPort = destinationPort;
-        this.departureTime = departureTime;
-        this.totalPrice = totalPrice;
+        this.vehicles = vehicles;
+        this.trafficSummary = trafficSummary;
     }
 
-    public Collection<AccountDetail> getPassengers()
+    public Collection<AccountSummary> getPassengers()
     {
         return passengers;
     }
 
-    public void setPassengers(Collection<AccountDetail> passengers)
+    public void setPassengers(Collection<AccountSummary> passengers)
     {
         this.passengers = passengers;
     }
 
-    public String getLicencePlate()
-    {
-        return licencePlate;
+    public Collection<AbstractVehicle> getVehicles() {
+        return vehicles;
     }
 
-    public void setLicencePlate(String licencePlate)
-    {
-        this.licencePlate = licencePlate;
+    public void setVehicles(Collection<AbstractVehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 
-    public String getDeparturePort()
-    {
-        return departurePort;
+    public TrafficSummary getTrafficSummary() {
+        return trafficSummary;
     }
 
-    public void setDeparturePort(String departurePort)
-    {
-        this.departurePort = departurePort;
+    public void setTrafficSummary(TrafficSummary trafficSummary) {
+        this.trafficSummary = trafficSummary;
     }
-
-    public String getDestinationPort()
-    {
-        return destinationPort;
-    }
-
-    public void setDestinationPort(String destinationPort)
-    {
-        this.destinationPort = destinationPort;
-    }
-
-    public Date getDepartureTime()
-    {
-        return departureTime;
-    }
-
-    public void setDepartureTime(Date departureTime)
-    {
-        this.departureTime = departureTime;
-    }
-
-    public double getTotalPrice()
-    {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice)
-    {
-        this.totalPrice = totalPrice;
-    }
-
 }

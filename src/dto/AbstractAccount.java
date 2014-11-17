@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ * Contains information relevant to a users account. 
+ * Extensions for this class are: AccountDetail and AccountSummary
  * @author Paul
  */
 public abstract class AbstractAccount implements Serializable 

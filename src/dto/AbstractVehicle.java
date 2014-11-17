@@ -3,7 +3,8 @@ package dto;
 import java.io.Serializable;
 
 /**
- *
+ *  Contains all relevant information for representing the vehicles
+ *  Extension classes are: CarDTO, LorryDTO, LargeMachineryDTO
  * @author Rick
  */
 public abstract class AbstractVehicle implements Serializable {

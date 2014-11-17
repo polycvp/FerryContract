@@ -13,12 +13,11 @@ public class ReservationDetail extends AbstractReservation implements Serializab
     private static final long serialVersionUID = 1L;
     
     private Collection<AccountDetail> passengers;
+    private Collection<AbstractVehicle> vehicles;
     private String departurePort;
     private String destinationPort;
     private Date departureTime;
     private Date arrivalTime;
-    private String vehicleType;
-    private String licencePlate;
     private String totalPrice;
 
     public ReservationDetail(String reservationSerialNumber)
@@ -26,7 +25,7 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         super(reservationSerialNumber);
     }
 
-    public ReservationDetail(Collection<AccountDetail> passengers, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, String vehicleType, String licencePlate, String totalPrice, String reservationSerialNumber)
+    public ReservationDetail(Collection<AccountDetail> passengers, String departurePort, String destinationPort, Date departureTime, Date arrivalTime, Collection<AbstractVehicle> vehicles, String totalPrice, String reservationSerialNumber)
     {
         super(reservationSerialNumber);
         this.passengers = passengers;
@@ -34,8 +33,7 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         this.destinationPort = destinationPort;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
-        this.vehicleType = vehicleType;
-        this.licencePlate = licencePlate;
+        this.vehicles = vehicles;
         this.totalPrice = totalPrice;
     }
 
@@ -89,24 +87,12 @@ public class ReservationDetail extends AbstractReservation implements Serializab
         this.arrivalTime = arrivalTime;
     }
 
-    public String getVehicleType()
-    {
-        return vehicleType;
+    public Collection<AbstractVehicle> getVehicles() {
+        return vehicles;
     }
 
-    public void setVehicleType(String vehicleType)
-    {
-        this.vehicleType = vehicleType;
-    }
-
-    public String getLicencePlate()
-    {
-        return licencePlate;
-    }
-
-    public void setLicencePlate(String licencePlate)
-    {
-        this.licencePlate = licencePlate;
+    public void setVehicles(Collection<AbstractVehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 
     public String getTotalPrice()
